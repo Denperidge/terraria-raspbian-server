@@ -118,7 +118,8 @@ sudo wget -N https://raw.githubusercontent.com/Denperidge/terraria-raspbian-serv
 
 # Reload systemd daemon, enable service & timer
 sudo systemctl daemon-reload
-sudo systemctl enable terraria.server.service && sudo systemctl start terraria.server.service
-sudo systemctl enable terraria.server.save.timer && sudo systemctl start terraria.server.save.timer
+sudo systemctl enable terraria.server.service
+sudo systemctl enable terraria.server.save.timer
 
-
+echo "Terraria server setup for reboot! To start it now, run the following commands:"
+echo "systemctl start terraria.server.service && systemctl start terraria.server.save.timer"
