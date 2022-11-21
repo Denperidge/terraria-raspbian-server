@@ -1,9 +1,9 @@
 # Disable and remove services
-sudo systemctl stop terrariaserver.service && sudo systemctl disable terrariaserver.service
-sudo systemctl stop terrariaserversave.timer && sudo systemctl disable terrariaserversave.timer
+sudo systemctl stop terraria.server.service && sudo systemctl disable terraria.server.service
+sudo systemctl stop terraria.server.save.timer && sudo systemctl disable terraria.server.save.timer
 
-sudo rm /etc/systemd/system/terrariaserver.service /etc/systemd/system/terrariaserversave.service /etc/systemd/system/terrariaserversave.timer
-sudo rm /etc/systemd/system/multi-user.target.wants/terrariaserver.service /etc/systemd/system/timers.target.wants/terrariaserversave.timer
+sudo rm /etc/systemd/system/terraria.server.service /etc/systemd/system/terraria.server.save.service /etc/systemd/system/terraria.server.save.timer
+sudo rm /etc/systemd/system/multi-user.target.wants/terraria.server.service /etc/systemd/system/timers.target.wants/terraria.server.save.timer
 
 sudo systemctl daemon-reload
 sudo systemctl reset-failed

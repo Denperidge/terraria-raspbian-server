@@ -5,7 +5,7 @@
 (If you don't have a proper swapfile already, do [that](https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-22-04) first! It can be needed for world generation, but it also just improves the Raspberry Pi's performance in general.
 
 ```bash
-wget "https://gist.github.com/Denperidge/c56fe9fd822143d4c77c36a207b6249b/raw/setup.sh"
+wget "https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/setup.sh"
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -19,7 +19,7 @@ You can attach to the servers console by using `sudo tmux attach-session -t terr
 ## Uninstall
 
 ```bash
-wget "https://gist.github.com/Denperidge/c56fe9fd822143d4c77c36a207b6249b/raw/uninstall.sh"
+wget "https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/uninstall.sh"
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
