@@ -1,0 +1,12 @@
+[Unit]
+Description=Server for (Desktop) Terraria
+After=network-online.target
+
+[Service]
+Type=forking
+Restart=always
+ExecStart=/usr/bin/tmux new-session -d -s terraria "mono --server --gc=sgen -O=all /opt/terraria-server/TerrariaServer.exe -config /opt/terraria-server/Server.cfg"
+ExecStop=/usr/bin/tmux send-keys -t terraria "exit" ENTER
+
+[Install]
+WantedBy=multi-user.target
