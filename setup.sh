@@ -109,11 +109,12 @@ echo "#journeypermission_setspawnrate=2" >> "$CFG"
 cd /etc/systemd/system/
 
 #     Terraria Server automatic start & shutdown
-sudo wget https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.service
+sudo wget -N https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.service
+#         wget -N overwrites if newer (thanks to https://serverfault.com/a/379060)
 
 #     Terraria periodic save
-sudo wget https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.save.service
-sudo wget https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.save.timer
+sudo wget -N https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.save.service
+sudo wget -N https://raw.githubusercontent.com/Denperidge/terraria-raspbian-server/main/systemd/terraria.server.save.timer
 
 # Reload systemd daemon, enable service & timer
 sudo systemctl daemon-reload
